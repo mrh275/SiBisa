@@ -10,4 +10,8 @@
     <string name="register">Register</string>
     <string name="your_name">Your name</string>
     <string name="auth_splash_image">Auth Splash Image</string>
+    <string name="user_image">User Image</string>
+    <string name="user_home_greeting">Hi,</string>
+    <string name="user_name">Nama Pengguna</string>
+    <string name="tv_home_jargon">Yuk! Belajar Bahasa Isyarat.</string>
 </resources>
