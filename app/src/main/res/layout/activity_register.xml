@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_300"
-    tools:context=".ui.auth.login.LoginActivity">
+    tools:context=".ui.auth.register.RegisterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,9 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:src="@drawable/ic_launcher_background"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="@string/auth_splash_image" />
 
         <androidx.cardview.widget.CardView
@@ -37,19 +38,39 @@
                 android:background="@drawable/layout_bg">
 
                 <TextView
-                    android:id="@+id/tv_login"
+                    android:id="@+id/tv_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
-                    android:text="@string/login"
+                    android:text="@string/register"
                     android:textColor="@color/gray_900"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_wrapper"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_register">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/field_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/your_name" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/email_wrapper"
@@ -62,7 +83,7 @@
                     app:boxBackgroundColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_login">
+                    app:layout_constraintTop_toBottomOf="@+id/name_wrapper">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/field_email"
@@ -105,7 +126,7 @@
                     android:layout_marginEnd="24dp"
                     android:paddingTop="12dp"
                     android:paddingBottom="12dp"
-                    android:text="@string/sign_in"
+                    android:text="@string/sign_up"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     app:cornerRadius="8dp"
@@ -143,7 +164,7 @@
                     android:layout_marginStart="-60dp"
                     android:layout_marginTop="42dp"
                     android:layout_marginEnd="36dp"
-                    android:text="@string/sign_up"
+                    android:text="@string/sign_in"
                     android:textColor="@color/blue_500"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -152,4 +173,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
