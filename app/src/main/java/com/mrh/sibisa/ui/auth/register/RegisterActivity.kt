@@ -1,8 +1,10 @@
 package com.mrh.sibisa.ui.auth.register
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.mrh.sibisa.databinding.ActivityRegisterBinding
+import com.mrh.sibisa.ui.auth.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -12,5 +14,13 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.tvLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        binding.btnRegister.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 }
