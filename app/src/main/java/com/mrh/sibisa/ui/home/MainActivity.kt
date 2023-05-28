@@ -11,5 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.bottomNavigation.background = null
+        binding.bottomNavigation.menu.getItem(2).isEnabled = false
     }
 }
