@@ -18,4 +18,6 @@
     <string name="profile">Profile</string>
     <string name="translate_sign_language">Translate Sign Language</string>
     <string name="setting">Setting</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
