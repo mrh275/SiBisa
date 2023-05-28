@@ -1,200 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="28dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="64dp"
+                android:paddingTop="48dp"
+                android:background="@color/blue_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/bg_circle"
+                    android:contentDescription="@string/user_image"
+                    android:padding="12dp"
+                    android:src="@drawable/user_icon"
+                    app:civ_circle_background_color="@color/white" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_user_home_greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/user_home_greeting"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/tv_user_name"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/user_name"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/tv_user_home_greeting"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/tv_home_jargon"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_user_home_greeting" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:cardCornerRadius="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_translate_sign"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:icon="@drawable/translate_icon"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:contentDescription="Translate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_learn"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_learn"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:icon="@drawable/translate_icon"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:contentDescription="Learn"
+                        app:layout_constraintStart_toEndOf="@+id/btn_translate_sign"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_transcribe"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_transcribe"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:icon="@drawable/translate_icon"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:contentDescription="Transcribe"
+                        app:layout_constraintStart_toEndOf="@+id/btn_learn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_play"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_play"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        style="@style/Widget.MaterialComponents.Button"
+                        app:icon="@drawable/translate_icon"
+                        android:insetBottom="0dp"
+                        android:insetLeft="0dp"
+                        android:insetRight="0dp"
+                        android:insetTop="0dp"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        android:contentDescription="Play"
+                        app:layout_constraintStart_toEndOf="@+id/btn_transcribe"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_current_info_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/gray_900"
+                android:textStyle="bold"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Informasi Terkini"
+                app:layout_constraintTop_toBottomOf="@+id/cv_menu"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_current_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_marginTop="8dp"
+                android:text="Lihat Semua"
+                android:textColor="@color/blue_500"
+                app:cornerRadius="8dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_current_info_title"
+                app:layout_constraintTop_toBottomOf="@id/cv_menu"
+                app:strokeWidth="2dp"
+                app:strokeColor="#0099ff"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="28dp">
+        app:fabCradleVerticalOffset="10dp"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="25dp"
+        android:layout_gravity="bottom">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="64dp"
-            android:paddingTop="48dp"
-            android:background="@color/blue_500"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_marginStart="24dp"
-                android:background="@drawable/bg_circle"
-                android:contentDescription="@string/user_image"
-                android:padding="12dp"
-                android:src="@drawable/user_icon"
-                app:civ_circle_background_color="@color/white" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/tv_user_home_greeting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/user_home_greeting"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/tv_user_name"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="@string/user_name"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toEndOf="@+id/tv_user_home_greeting"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/tv_home_jargon"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_user_home_greeting" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_menu"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:cardCornerRadius="25dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
-            app:cardElevation="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            android:background="@android:color/transparent"
+            app:menu="@menu/bottom_nav_menu" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_translate_sign"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    style="@style/Widget.MaterialComponents.Button"
-                    app:icon="@drawable/translate_icon"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-                    android:insetTop="0dp"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    android:contentDescription="Translate"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_learn"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_learn"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    style="@style/Widget.MaterialComponents.Button"
-                    app:icon="@drawable/translate_icon"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-                    android:insetTop="0dp"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    android:contentDescription="Learn"
-                    app:layout_constraintStart_toEndOf="@+id/btn_translate_sign"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_transcribe"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_transcribe"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    style="@style/Widget.MaterialComponents.Button"
-                    app:icon="@drawable/translate_icon"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-                    android:insetTop="0dp"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    android:contentDescription="Transcribe"
-                    app:layout_constraintStart_toEndOf="@+id/btn_learn"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_play"/>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_play"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    style="@style/Widget.MaterialComponents.Button"
-                    app:icon="@drawable/translate_icon"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-                    android:insetTop="0dp"
-                    app:iconPadding="0dp"
-                    app:iconGravity="textStart"
-                    android:contentDescription="Play"
-                    app:layout_constraintStart_toEndOf="@+id/btn_transcribe"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-
-
-        <TextView
-            android:id="@+id/tv_current_info_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/gray_900"
-            android:textStyle="bold"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="Informasi Terkini"
-            app:layout_constraintTop_toBottomOf="@+id/cv_menu"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_current_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_marginTop="8dp"
-            android:text="Lihat Semua"
-            android:textColor="@color/blue_500"
-            app:cornerRadius="8dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_current_info_title"
-            app:layout_constraintTop_toBottomOf="@id/cv_menu"
-            app:strokeWidth="2dp"
-            app:strokeColor="#0099ff"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_icon_white"
+        android:backgroundTint="@color/blue_500"
+        android:clickable="true"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="35dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:tint="@color/white"
+        android:contentDescription="@string/translate_sign_language"
+        android:focusable="true" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
