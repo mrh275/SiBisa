@@ -14,4 +14,8 @@
     <string name="user_home_greeting">Hi,</string>
     <string name="user_name">Nama Pengguna</string>
     <string name="tv_home_jargon">Yuk! Belajar Bahasa Isyarat.</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="translate_sign_language">Translate Sign Language</string>
+    <string name="setting">Setting</string>
 </resources>
