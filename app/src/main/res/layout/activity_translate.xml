@@ -11,16 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <ImageView
-        android:id="@+id/captureImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backToMain"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/camera_icon_white"
-        android:contentDescription="Capture Image" />
+        android:layout_marginStart="16dp"
+        app:icon="@drawable/baseline_arrow_back_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/switchCamera"
@@ -31,5 +33,6 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="@+id/viewFinder"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/switch_camera_icon_white"/>
+        app:srcCompat="@drawable/switch_camera_icon_white"
+        android:contentDescription="Switch Camera" />
 </androidx.constraintlayout.widget.ConstraintLayout>
