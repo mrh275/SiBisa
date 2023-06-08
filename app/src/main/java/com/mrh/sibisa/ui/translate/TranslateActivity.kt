@@ -1,8 +1,17 @@
 package com.mrh.sibisa.ui.translate
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.graphics.SurfaceTexture
+import android.hardware.camera2.CameraDevice
+import android.hardware.camera2.CameraManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
+import android.view.TextureView
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -12,6 +21,7 @@ import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import com.mrh.sibisa.databinding.ActivityTranslateBinding
+import com.mrh.sibisa.ui.home.MainActivity
 
 class TranslateActivity : AppCompatActivity() {
 
@@ -25,9 +35,14 @@ class TranslateActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.switchCamera.setOnClickListener {
-            cameraSelector = if(cameraSelector.equals(CameraSelector.DEFAULT_BACK_CAMERA)) CameraSelector.DEFAULT_FRONT_CAMERA
+            cameraSelector = if(cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) CameraSelector.DEFAULT_FRONT_CAMERA
             else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
+        }
+
+        binding.backToMain.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
