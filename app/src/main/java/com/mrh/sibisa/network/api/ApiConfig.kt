@@ -11,8 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiConfig {
 
     companion object {
-        fun getApiService() : ApiService {
-            val token = "token"
+        fun getApiService(token: String = "") : ApiService {
+            val token = token
             val loggingInterceptor = if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             } else {
@@ -23,7 +23,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.mocki.io/v2/9f0eff74/")
+                .baseUrl("https://sibisa.sman1rawamerta.sch.id/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
