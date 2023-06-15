@@ -3,12 +3,14 @@ package com.mrh.sibisa.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.mrh.sibisa.data.news.NewsDataItem
 import com.mrh.sibisa.data.sign.SignItem
 import com.mrh.sibisa.databinding.ListItemBinding
 
-class MainAdapter(private var listSign: List<SignItem?>?) : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
+class MainAdapter(private var listNews: List<NewsDataItem>) : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     class MyViewHolder(private val binding: ListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val signText = binding.tvSign
+        val newsTitle = binding.tvNewsTitle
+        val newsExcerpt = binding.tvNewsExcerpt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -17,13 +19,12 @@ class MainAdapter(private var listSign: List<SignItem?>?) : RecyclerView.Adapter
     }
 
     override fun getItemCount(): Int {
-        return listSign?.count()!!
+        return listNews.count()
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val signList = listSign?.get(position)
-        if (signList != null) {
-            holder.signText.text = signList.letter.toString()
-        }
+        val newsList = listNews[position]
+        holder.newsTitle.text = newsList.newsTitle
+        holder.newsExcerpt.text = newsList.newsExcerpt
     }
 }
