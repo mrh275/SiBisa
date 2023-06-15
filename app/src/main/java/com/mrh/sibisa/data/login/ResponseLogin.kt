@@ -1,8 +1,18 @@
 package com.mrh.sibisa.data.login
 
-data class ResponseLogin(
-	var message: String,
-	var accessToken: String,
-	var status: Int
-)
+import com.google.gson.annotations.SerializedName
 
+data class ResponseLogin(
+
+	@field:SerializedName("userData")
+	val userData: UserData,
+
+	@field:SerializedName("message")
+	val message: String,
+
+	@field:SerializedName("accessToken")
+	val accessToken: String,
+
+	@field:SerializedName("status")
+	val status: Int
+)
