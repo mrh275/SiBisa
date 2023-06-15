@@ -16,6 +16,7 @@ import com.mrh.sibisa.databinding.ActivityMainBinding
 import com.mrh.sibisa.ui.auth.login.LoginActivity
 import com.mrh.sibisa.ui.home.fragment.ProfileFragment
 import com.mrh.sibisa.ui.home.fragment.SettingFragment
+import com.mrh.sibisa.ui.translate.CameraActivity
 import com.mrh.sibisa.ui.translate.TranslateActivity
 
 class MainActivity : AppCompatActivity() {
@@ -64,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
         replaceFragment(homeFragment)
         binding.fabTranslate.setOnClickListener {
-            val intent = Intent(this, TranslateActivity::class.java)
+            val intent = Intent(this, CameraActivity::class.java)
             startActivity(intent)
         }
 
