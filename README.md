@@ -1,6 +1,6 @@
 # SiBisa
 <p align="center">
-![2](https://github.com/mrh275/SiBisa/assets/125880337/511528b7-caaf-418b-929d-986edefb3f44)
+  <img src="https://github.com/mrh275/SiBisa/assets/125880337/511528b7-caaf-418b-929d-986edefb3f44" width="250"/>
 </p>
 
 <p align="justify">
@@ -19,4 +19,4 @@ Based on data from BPS (Badan Pusat Statistik) in 2020, there are around 29% of 
 | Muhamad Ramdani Hidayatullah | A114DSX1051 | https://github.com/mrh275 |
 
 ## Citation
-ElectroCode, Hand Detection Android App Using TensorFlow Lite(GPU) and OpenCV, https://github.com/pramod722445/hand_detection
+Pramod, Hand Detection Android App Using TensorFlow Lite(GPU) and OpenCV, https://github.com/pramod722445/hand_detection
