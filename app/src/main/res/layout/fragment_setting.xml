@@ -3,12 +3,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.fragment.SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Setting Fragment" />
+        android:layout_height="wrap_content"
+        android:background="@color/blue_500"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="68dp">
+
+        <TextView
+            android:id="@+id/settingChangeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_your_name"
+            android:paddingVertical="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorSecondary"
+            android:paddingHorizontal="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/icon_name"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/settingChangeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_your_email"
+            android:paddingVertical="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorSecondary"
+            android:paddingHorizontal="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/outline_email_24"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/settingChangeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/settingChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password"
+            android:paddingVertical="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorSecondary"
+            android:paddingHorizontal="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/key_password"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/settingChangeEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/settingAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us"
+            android:paddingVertical="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorSecondary"
+            android:paddingHorizontal="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:drawablePadding="8dp"
+            app:drawableStartCompat="@drawable/outline_about_info"
+            app:drawableTint="?android:textColorSecondary"
+            app:layout_constraintTop_toBottomOf="@+id/settingChangePassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
