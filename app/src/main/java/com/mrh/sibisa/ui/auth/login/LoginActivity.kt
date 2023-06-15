@@ -40,6 +40,8 @@ class LoginActivity : AppCompatActivity() {
                 viewModel.getAuthData().observe(this) {
                     editorPref.apply {
                         putString("AUTH_TOKEN", it?.accessToken)
+                        putString("NAME", it?.userData?.name)
+                        putString("EMAIL", it?.userData?.email)
                     }.apply()
 
                     startActivity(Intent(this, MainActivity::class.java))
