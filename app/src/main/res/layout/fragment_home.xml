@@ -27,14 +27,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageView
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_user_home"
                         android:layout_width="65dp"
                         android:layout_height="65dp"
                         android:layout_marginStart="24dp"
                         android:background="@drawable/bg_circle"
                         android:contentDescription="@string/user_image"
-                        android:padding="12dp"
-                        android:src="@drawable/user_icon"
+                        android:padding="8dp"
+                        android:src="@drawable/user_profil"
                         app:civ_circle_background_color="@color/white" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
