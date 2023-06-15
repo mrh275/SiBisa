@@ -207,7 +207,7 @@ public class objectDetectorClass {
                 // Convert scaledBitmapSign to byteBuffer
                 ByteBuffer byteBufferSign = convertBitmapSignToByteBuffer(scaledBitmapSign);
                 // create array output of interpreter Sign Model
-                float[][] output_class_value = new float[1][1];
+                float[][] output_class_value = new float[1][26];
 
                 // predict output for byteBufferSign
                 interpreterSignModel.run(byteBufferSign, output_class_value);
