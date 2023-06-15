@@ -76,7 +76,7 @@ public class CameraActivity extends Activity implements CameraBridgeViewBase.CvC
         mOpenCvCameraView.setCvCameraViewListener(this);
         try{
             // load model hand model and sign model and label map of hand
-            objectDetectorClass=new objectDetectorClass(getAssets(),"hand_model.tflite","custom_label.txt",300, "SignModel.tflite", 96);
+            objectDetectorClass=new objectDetectorClass(getAssets(),"hand_model.tflite","custom_label.txt",300, "NewSignModel.tflite", 96);
             Log.d("MainActivity","Model is successfully loaded");
         }
         catch (IOException e){
