@@ -32,11 +32,11 @@ class HomeFragment(context: Context) : Fragment(){
         val layoutManager = LinearLayoutManager(context)
         val userNameHome = view.findViewById<TextView>(R.id.tv_user_name)
         userNameHome.text = sharedPreferences?.getString("NAME", "Pengguna")
-        recyclerView = view.findViewById(R.id.rv_signs)
+        recyclerView = view.findViewById(R.id.rv_news)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
         viewModel.setSigns()
-        viewModel.getSigns().observe(viewLifecycleOwner) {
+        viewModel.getNews().observe(viewLifecycleOwner) {
             if (it != null) {
                 adapter = MainAdapter(it)
                 recyclerView.adapter = adapter
