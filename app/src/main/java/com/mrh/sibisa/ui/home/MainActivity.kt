@@ -17,7 +17,6 @@ import com.mrh.sibisa.ui.auth.login.LoginActivity
 import com.mrh.sibisa.ui.home.fragment.ProfileFragment
 import com.mrh.sibisa.ui.home.fragment.SettingFragment
 import com.mrh.sibisa.ui.translate.CameraActivity
-import com.mrh.sibisa.ui.translate.TranslateActivity
 
 class MainActivity : AppCompatActivity() {
 
