@@ -1,12 +1,12 @@
-System Requirement
-•	Working on Google Colab
-•	Tensorflow: 2.12.0
-•	Python: 3.9
-•	Dataset: 
--	https://drive.google.com/drive/folders/1Gr6KCP4IOFR9-ZgoPHZ6kxDQWJthkzfx?usp=sharing 
--	https://www.kaggle.com/datasets/alfredolorentiars/bisindo-letter-dataset
+**System Requirement**
+- Working on Google Colab
+- Tensorflow: 2.12.0
+- Python: 3.9
+- Dataset: 
+    -	https://drive.google.com/drive/folders/1Gr6KCP4IOFR9-ZgoPHZ6kxDQWJthkzfx?usp=sharing 
+    -	https://www.kaggle.com/datasets/alfredolorentiars/bisindo-letter-dataset
 
-The steps to create an ML model
+**The steps to create a Machine Learning model**
 1.	Check version TensorFlow
 2.	Import all required library
 3.	Import Dataset from Google Drive
@@ -17,3 +17,5 @@ The steps to create an ML model
 8.	Evaluate the model
 9.	Testing image
 10.	Convert to TFlite
+
+
