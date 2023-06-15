@@ -20,4 +20,12 @@
     <string name="setting">Setting</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_template">email@email.com</string>
+    <string name="settings">Settings</string>
+    <string name="change_password">Change Password</string>
+    <string name="about_us">About Us</string>
+    <string name="change_your_name">Change Your Name</string>
+    <string name="change_your_email">Change Your Email</string>
+    <string name="edit_dialog_placeholder">Silahkan isi kolom ini</string>
+    <string name="title_prompt">Title Prompt</string>
 </resources>
