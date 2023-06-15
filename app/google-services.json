@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "266493597200",
+    "firebase_url": "https://sibisa-2b7db-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "sibisa-2b7db",
+    "storage_bucket": "sibisa-2b7db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266493597200:android:c537bb7a92d502bf329c95",
+        "android_client_info": {
+          "package_name": "com.mrh.sibisa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHI6Rl9jHxjS79uowFuD3lmZdKFOfM7tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266493597200:android:deef90e9f2803f14329c95",
+        "android_client_info": {
+          "package_name": "com.mrh.sibisa.ui.home"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHI6Rl9jHxjS79uowFuD3lmZdKFOfM7tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
