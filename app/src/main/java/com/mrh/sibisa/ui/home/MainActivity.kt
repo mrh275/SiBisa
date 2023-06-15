@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment(this)
         val profileFragment = ProfileFragment()
-        val settingFragment = SettingFragment()
+        val settingFragment = SettingFragment(this)
 
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
@@ -92,12 +92,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_setting -> replaceFragment(settingFragment)
                 R.id.nav_login -> {
                     if(token != null) {
-                        val promptTitle : String? = "Logout"
-                        val message :String? = "Apakah anda yakin ingin logout?"
+                        val promptTitle = "Logout"
+                        val message = "Apakah anda yakin ingin logout?"
                         showCustomDialog(promptTitle, message, token, sharedPreferences)
                     } else {
                         startActivity(Intent(this, LoginActivity::class.java))
-                        finish()
                     }
                 }
             }
@@ -176,7 +175,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val CAMERA_X_RESULT = 200
 
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
