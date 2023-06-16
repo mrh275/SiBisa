@@ -28,4 +28,8 @@
     <string name="change_your_email">Change Your Email</string>
     <string name="edit_dialog_placeholder">Silahkan isi kolom ini</string>
     <string name="title_prompt">Title Prompt</string>
+    <string name="huruf_abjad">Huruf Abjad</string>
+    <string name="sign_category">Sign Category</string>
+    <string name="kata_isyarat">Kata Isyarat</string>
+    <string name="sign_title">Sign Title</string>
 </resources>
