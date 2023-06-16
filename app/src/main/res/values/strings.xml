@@ -32,4 +32,7 @@
     <string name="sign_category">Sign Category</string>
     <string name="kata_isyarat">Kata Isyarat</string>
     <string name="sign_title">Sign Title</string>
+    <string name="sibisa">SiBisa</string>
+    <string name="sibisa_akronim">Sistem Interaktif Bahasa Isyarat</string>
+    <string name="creator">Pembuat</string>
 </resources>
