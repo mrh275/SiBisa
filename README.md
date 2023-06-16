@@ -12,10 +12,10 @@ Based on data from BPS (Badan Pusat Statistik) in 2020, there are around 29% of 
 | Name  | Bangkit ID | GitHub Profile |
 | ------------- | ------------- | ------------- |
 | Nisa Fitriani Fasya | M295DSY2587   | https://github.com/nisafitrianif |
-| Naomi Lastiar | M295DSY2511  | - |
+| Naomi Lastiar | M295DSY2511  | https://github.com/naomisrg |
 | Selvia Syazwana | M151DSY2115  | https://github.com/pitears |
 | Janatin | C295DSY3172  | https://github.com/janatin20001 |
-| Kirana Salsabila Aulia Gunawan | C208DKY3972  | - |
+| Kirana Salsabila Aulia Gunawan | C208DKY3972  | https://github.com/kir035 |
 | Muhamad Ramdani Hidayatullah | A114DSX1051 | https://github.com/mrh275 |
 
 ## Citation
