@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mrh.sibisa.R
-import com.mrh.sibisa.data.sign.SignItem
 import com.mrh.sibisa.ui.home.MainAdapter
 import com.mrh.sibisa.ui.home.MainViewModel
 
@@ -35,7 +34,7 @@ class HomeFragment(context: Context) : Fragment(){
         recyclerView = view.findViewById(R.id.rv_news)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        viewModel.setSigns()
+        viewModel.setNews()
         viewModel.getNews().observe(viewLifecycleOwner) {
             if (it != null) {
                 adapter = MainAdapter(it)
