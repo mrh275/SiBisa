@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mrh.sibisa.data.news.NewsDataItem
-import com.mrh.sibisa.data.sign.SignItem
 import com.mrh.sibisa.databinding.ListItemBinding
 
 class MainAdapter(private var listNews: List<NewsDataItem>) : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
