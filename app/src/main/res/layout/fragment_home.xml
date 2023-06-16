@@ -96,11 +96,11 @@
                         android:layout_height="match_parent">
 
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btn_translate_sign"
+                            android:id="@+id/btnLearn"
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             style="@style/Widget.MaterialComponents.Button"
-                            app:icon="@drawable/translate_icon"
+                            app:icon="@drawable/icon_book"
                             android:insetBottom="0dp"
                             android:insetLeft="0dp"
                             android:insetRight="0dp"
@@ -128,7 +128,7 @@
                             app:iconGravity="textStart"
                             app:iconTint="@color/white"
                             android:contentDescription="Learn"
-                            app:layout_constraintStart_toEndOf="@+id/btn_translate_sign"
+                            app:layout_constraintStart_toEndOf="@+id/btnLearn"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/btn_transcribe"/>
