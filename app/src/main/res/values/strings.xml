@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sibisa</string>
+    <string name="app_name">SiBisa</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
