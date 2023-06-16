@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment(this)
         val profileFragment = ProfileFragment()
-        val settingFragment = SettingFragment(this)
+        val settingFragment = SettingFragment(this, token.toString())
 
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
