@@ -1,6 +1,7 @@
 package com.mrh.sibisa.ui.home.fragment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,9 +10,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 import com.mrh.sibisa.R
 import com.mrh.sibisa.ui.home.MainAdapter
 import com.mrh.sibisa.ui.home.MainViewModel
+import com.mrh.sibisa.ui.learn.LearnActivity
 
 class HomeFragment(context: Context) : Fragment(){
 
@@ -39,6 +42,13 @@ class HomeFragment(context: Context) : Fragment(){
             if (it != null) {
                 adapter = MainAdapter(it)
                 recyclerView.adapter = adapter
+            }
+        }
+
+        val btnLearn = view.findViewById<MaterialButton>(R.id.btnLearn)
+        btnLearn.setOnClickListener {
+            activity.let {
+                it?.startActivity(Intent(it, LearnActivity::class.java))
             }
         }
     }
