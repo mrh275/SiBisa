@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.mrh.sibisa.R
+import com.mrh.sibisa.ui.about.AboutActivity
 import com.mrh.sibisa.ui.auth.login.LoginActivity
 import com.mrh.sibisa.ui.customdialog.PopUpFragment
 
@@ -38,6 +39,7 @@ class SettingFragment(context: Context, token: String) : Fragment() {
         val editName = view.findViewById<TextView>(R.id.settingChangeName)
         val editEmail = view.findViewById<TextView>(R.id.settingChangeEmail)
         val editPassword = view.findViewById<TextView>(R.id.settingChangePassword)
+        val aboutUs = view.findViewById<TextView>(R.id.settingAbout)
 
         editName.setOnClickListener {
             val promptTitle = editName.text.toString()
@@ -52,6 +54,12 @@ class SettingFragment(context: Context, token: String) : Fragment() {
         editPassword.setOnClickListener {
             val promptTitle = editPassword.text.toString()
             showDialogEdit(promptTitle, 3, token)
+        }
+
+        aboutUs.setOnClickListener {
+            activity?.let {
+                it.startActivity(Intent(it, AboutActivity::class.java))
+            }
         }
     }
 
