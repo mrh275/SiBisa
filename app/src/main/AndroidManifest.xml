@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -15,13 +16,20 @@
         android:theme="@style/Theme.Sibisa"
         tools:targetApi="31">
         <activity
+            android:name=".ui.learn.DetailSignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.learn.LearnActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.auth.register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.auth.login.LoginActivity"
             android:exported="false" />
-        <activity android:name=".ui.translate.CameraActivity"
-            android:exported="false"/>
+        <activity
+            android:name=".ui.translate.CameraActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.home.MainActivity"
             android:exported="true">
