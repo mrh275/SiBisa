@@ -1,6 +1,7 @@
 package com.mrh.sibisa.ui.learn
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.mrh.sibisa.R
 import com.mrh.sibisa.databinding.ActivityLearnBinding
+import com.mrh.sibisa.ui.auth.login.LoginActivity
 import com.mrh.sibisa.ui.learn.fragment.LetterFragment
 
 class LearnActivity : AppCompatActivity() {
@@ -19,6 +21,7 @@ class LearnActivity : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPreferences: SharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("AUTH_TOKEN", null)
+        checkAuth(sharedPreferences)
 
         val letterFragment = LetterFragment(token.toString())
         replaceFragment(letterFragment)
@@ -32,4 +35,11 @@ class LearnActivity : AppCompatActivity() {
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
             .commit()
     }
+
+    private fun checkAuth(sharedPreferences: SharedPreferences?) {
+        if(sharedPreferences?.getString("AUTH_TOKEN", null) == null) {
+                startActivity(Intent(this, LoginActivity::class.java))
+                finishAfterTransition()
+            }
+        }
 }
