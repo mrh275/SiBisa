@@ -4,6 +4,7 @@ import com.mrh.sibisa.data.login.ResponseLogin
 import com.mrh.sibisa.data.logout.ResponseLogout
 import com.mrh.sibisa.data.news.ResponseNews
 import com.mrh.sibisa.data.register.ResponseRegister
+import com.mrh.sibisa.data.sign.ResponseSign
 import com.mrh.sibisa.data.users.ResponseUserUpdate
 import retrofit2.Call
 import retrofit2.http.Field
@@ -42,4 +43,7 @@ interface ApiService {
         @Field("email") email: String?,
         @Field("password") password: String?
     ) : Call<ResponseUserUpdate>
+
+    @GET("signs/letters")
+    fun getLettersSign() : Call<ResponseSign>
 }
