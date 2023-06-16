@@ -17,7 +17,6 @@ class DetailSignActivity() : AppCompatActivity() {
         binding = ActivityDetailSignBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val signName = intent.getStringExtra("signName")
-        Toast.makeText(this, signName, Toast.LENGTH_SHORT).show()
 
         val url = "https://sibisa.sman1rawamerta.sch.id/assets/img/signs/huruf/$signName.jpg"
         Glide.with(this)
