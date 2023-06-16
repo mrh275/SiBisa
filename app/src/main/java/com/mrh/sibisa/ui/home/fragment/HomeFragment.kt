@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +31,8 @@ class HomeFragment(context: Context) : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = MainViewModel()
+        val progressBar = view.findViewById<ProgressBar>(R.id.progressBar)
+        progressBar.visibility = View.VISIBLE
         val sharedPreferences = context?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val layoutManager = LinearLayoutManager(context)
         val userNameHome = view.findViewById<TextView>(R.id.tv_user_name)
@@ -42,6 +45,7 @@ class HomeFragment(context: Context) : Fragment(){
             if (it != null) {
                 adapter = MainAdapter(it)
                 recyclerView.adapter = adapter
+                progressBar.visibility = View.GONE
             }
         }
 

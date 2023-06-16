@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mrh.sibisa.R
@@ -32,6 +33,8 @@ class LetterFragment(private val token: String) : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = LearnViewModel()
         val layoutManager = LinearLayoutManager(context)
+        val progressBar = view.findViewById<ProgressBar>(R.id.progressBar)
+        progressBar.visibility = View.VISIBLE
 
         recyclerView = view.findViewById(R.id.rv_signs)
         recyclerView.layoutManager = layoutManager
@@ -41,10 +44,10 @@ class LetterFragment(private val token: String) : Fragment() {
             if(it != null) {
                 adapter = LearnAdapter(it)
                 recyclerView.adapter = adapter
+                progressBar.visibility = View.GONE
                 adapter.setOnItemClickCallback(object : LearnAdapter.OnItemClickCallback {
                     override fun onItemClicked(data: LettersDataItem) {
                         activity?.let {
-//                            Toast.makeText(requireContext(), data.sign, Toast.LENGTH_SHORT).show()
                             val detail = Intent(it, DetailSignActivity::class.java).also { detail ->
                                 detail.putExtra("signName", data.sign)
                             }
@@ -55,4 +58,6 @@ class LetterFragment(private val token: String) : Fragment() {
             }
         }
     }
+
+
 }
